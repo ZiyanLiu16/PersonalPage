@@ -6,25 +6,40 @@
   <meta name="description" content="Ziyan Liu — professional links and resume.">
   <title>Ziyan Liu</title>
   <style>
-    :root { --ink: #3f4650; --muted: #78818c; --accent: #2d79a8; --rule: #e4e8eb; }
+    :root { --ink: #343b44; --muted: #78818c; --accent: #2d79a8; --rule: #e4e8eb; }
     * { box-sizing: border-box; }
-    body { min-height: 100vh; margin: 0; display: grid; place-items: center; background: #fff; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
-    main { width: min(760px, calc(100% - 48px)); padding: 42px 0; }
-    h1 { margin: 0 0 28px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(38px, 6vw, 52px); font-weight: 500; letter-spacing: -.7px; }
-    nav { display: flex; flex-wrap: wrap; gap: 0 22px; padding-top: 18px; border-top: 1px solid var(--rule); }
-    a { padding: 8px 0; color: var(--accent); font-size: 16px; text-decoration: none; text-underline-offset: 4px; }
+    body { min-height: 100vh; margin: 0; background: #fff; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+    main { width: min(1040px, calc(100% - 64px)); min-height: 100vh; margin: 0 auto; display: grid; grid-template-columns: minmax(260px, .95fr) minmax(320px, 1.05fr); align-items: center; gap: clamp(44px, 8vw, 112px); padding: 56px 0; }
+    .details { padding: 24px 0; }
+    h1 { margin: 0 0 30px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(42px, 5vw, 64px); font-weight: 500; letter-spacing: -.9px; }
+    .line { width: 42px; height: 1px; margin-bottom: 18px; background: var(--rule); }
+    nav { display: grid; gap: 8px; }
+    a { width: fit-content; padding: 5px 0; color: var(--accent); font-size: 16px; text-decoration: none; text-underline-offset: 4px; }
     a:hover, a:focus-visible { color: var(--ink); text-decoration: underline; outline: none; }
-    @media (max-width: 600px) { main { width: min(100% - 40px, 760px); } nav { display: grid; gap: 5px; } }
+    figure { height: min(68vh, 560px); min-height: 390px; margin: 0; overflow: hidden; background: #edf0f1; }
+    img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 67% center; }
+    @media (max-width: 720px) {
+      main { width: min(100% - 40px, 560px); min-height: auto; grid-template-columns: 1fr; gap: 30px; padding: 40px 0 48px; }
+      .details { order: 2; padding: 0; }
+      figure { order: 1; width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 10; }
+      img { object-position: 67% 54%; }
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>Ziyan Liu</h1>
-    <nav aria-label="Professional links">
-      <a href="https://www.linkedin.com/in/ziyan-liu-50391894" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=JzIeqTcAAAAJ&amp;hl=en&amp;authuser=1" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-      <a href="resume_ziyan.pdf" download>Download résumé</a>
-    </nav>
+    <section class="details" aria-label="Professional links">
+      <h1>Ziyan Liu</h1>
+      <div class="line" aria-hidden="true"></div>
+      <nav>
+        <a href="https://www.linkedin.com/in/ziyan-liu-50391894" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=JzIeqTcAAAAJ&amp;hl=en&amp;authuser=1" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="resume_ziyan.pdf" download>Download résumé</a>
+      </nav>
+    </section>
+    <figure>
+      <img src="portrait.jpg" alt="Ziyan Liu overlooking a sea of clouds at sunrise">
+    </figure>
   </main>
 </body>
 </html>
